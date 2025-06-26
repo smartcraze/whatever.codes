@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./algolia.css";
+@import "./syntax.css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -180,3 +183,102 @@
   
 }
 
+
+
+.prose {
+  margin: 0 !important;
+}
+
+pre {
+  padding: 2px 0 !important;
+  width: inherit !important;
+  overflow-x: auto;
+}
+
+pre>code {
+  display: grid;
+  max-width: inherit !important;
+  padding: 14px 0 !important;
+}
+
+.code-line {
+  padding: 0.75px 16px;
+  @apply border-l-2 border-transparent;
+}
+
+.line-number::before {
+  display: inline-block;
+  width: 1rem;
+  margin-right: 22px;
+  margin-left: -2px;
+  color: rgb(110, 110, 110);
+  content: attr(line);
+  font-size: 13.5px;
+  text-align: right;
+}
+
+.highlight-line {
+  @apply relative bg-primary/10 border-l-4 border-primary/60 pl-4;
+}
+
+
+
+
+
+.highlight-comp>code {
+  background-color: transparent !important;
+}
+
+:root {
+  --scrollbar-thumb: rgba(113,
+      113,
+      122,
+      0.6);
+}
+
+[data-theme="dark"],
+[class*="dark"] {
+  --scrollbar-thumb: rgba(160,
+      160,
+      160,
+      0.4);
+}
+
+/* Apply globally */
+* {
+  scrollbar-width: thin;
+  /* Firefox thin scrollbar */
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+  /* Thumb color with transparent track */
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  /* Vertical scrollbar width */
+  height: 8px;
+  /* Horizontal scrollbar height */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  /* Thumb color */
+  border-radius: 9999px;
+  /* Fully rounded thumb */
+  border: 2px solid transparent;
+  /* Thin padding effect */
+  background-clip: content-box;
+  /* Smooth thumb edges */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Transparent track */
+}
+
+.rehype-code-title {
+  @apply flex items-center gap-2
+}
+
+td>code {
+  word-break: keep-all !important;
+}
