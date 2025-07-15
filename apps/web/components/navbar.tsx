@@ -7,6 +7,7 @@ import Anchor from "./anchor";
 import { SheetLeftbar } from "./leftbar";
 import { page_routes } from "@/lib/routes-config";
 import { SheetClose } from "@/components/ui/sheet";
+import Image from "next/image";
 
 export const NAVLINKS = [
   {
@@ -62,6 +63,7 @@ export function Navbar() {
 export function Logo() {
   return (
     <Link href="/" className="text-lg font-semibold flex items-center gap-2 text-primary">
+      <Image src="/logo.png" alt="logo" width={32} height={32} className="dark:invert"/>
       <h1>Whatever</h1>
     </Link>
   );
