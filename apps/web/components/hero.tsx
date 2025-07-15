@@ -33,7 +33,7 @@ export function Hero() {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <MotionDiv
-            className="text-4xl md:text-6xl font-bold tracking-tight text-white"
+            className="text-4xl md:text-6xl font-bold tracking-tight text-foreground dark:text-white"
             whileHover={{ scale: 1.01 }}
           >
             Whatever I Build,
