@@ -1,37 +1,45 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Server } from "lucide-react";
+import { ArrowRight,  Code, Server } from "lucide-react";
 import * as motion from "motion/react-client";
+import { Badge } from "./ui/badge";
 
 const MotionDiv = motion.div;
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 bg-background overflow-hidden">
-      {/* Animated Glows */}
+
       <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
         <MotionDiv
           className="absolute top-1/3 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
           animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
+
         <MotionDiv
           className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"
           animate={{ scale: [1, 1.05, 1], opacity: [0.4, 0.6, 0.4] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
-      </div>
 
-      {/* Main Content */}
+      </div>
+       
+
       <div className="relative z-10 text-center max-w-4xl mx-auto">
-        {/* Title Animation */}
         <MotionDiv
           className="w-fit mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
+         <Badge variant="outline" className=" text-primary border-primary/30">
+            DevOps Lab
+          </Badge>
+
+
+          
           <MotionDiv
             className="text-4xl md:text-6xl font-bold tracking-tight text-foreground dark:text-white"
             whileHover={{ scale: 1.01 }}

@@ -17,11 +17,11 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       <Hero />
 
-      <main className="w-full max-w-6xl px-4 md:px-6 lg:px-8 mx-auto space-y-24">
+      <main className="w-full max-w-6xl px-4 md:px-6 lg:px-8 mx-auto ">
         <motion.section
           initial={fadeInUp.initial}
           whileInView={fadeInUp.whileInView}
-          transition={{ duration: 0.6, ease: [0.17, 0.67, 0.83, 0.67] }}
+          transition={{ duration: 0.4, ease: [0.17, 0.67, 0.83, 0.67] }}
           viewport={{ once: true, amount: 0.4 }}
         >
           <About />
@@ -30,7 +30,7 @@ export default function HomePage() {
         <motion.section
           initial={fadeInUp.initial}
           whileInView={fadeInUp.whileInView}
-          transition={{ duration: 0.6, ease: [0.17, 0.67, 0.83, 0.67] }}
+          transition={{ duration: 0.4, ease: [0.17, 0.67, 0.83, 0.67] }}
           viewport={{ once: true, amount: 0.4 }}
         >
           <InfraArchitecture />
