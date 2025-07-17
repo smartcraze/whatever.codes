@@ -8,17 +8,17 @@ import { SheetLeftbar } from "./leftbar";
 import { page_routes } from "@/lib/routes-config";
 import { SheetClose } from "@/components/ui/sheet";
 import Image from "next/image";
+import { title } from "process";
 
 export const NAVLINKS = [
   {
-    title: "Documentation",
+    title: "docs",
     href: `/docs${page_routes[0].href}`,
   },
   {
-    title: "Blog",
-    href: "/blog",
+    title: "ui",
+    href: "/ui",
   },
-  
 ];
 
 export function Navbar() {
